@@ -6,3 +6,5 @@ const product = [
         description: "perfecrt"
     }
 ]
+
+export default product

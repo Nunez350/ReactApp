@@ -1,18 +1,34 @@
 import React from "react"
-import Product from "./components/Product"
-import productsData from "./components/vschoolProducts.js"
+import TodoItem from "./components/TodoItem"
+import todosData from "./components/todosData"
 
 function App() {
-    const productComponents = productsData.map(item => <Product key={item.id} product={item}/> )
-    
+    const todoItems = todosData.map(item => <TodoItem key={item.id} item={item}/>)
+
     return (
-        <div>
-            {productComponents}
+        <div className="todo-list">
+            {todoItems}
+
         </div>
     )
 }
 
 export default App
+
+// import Product from "./components/Product"
+// import productsData from "./components/vschoolProducts.js"
+
+// function App() {
+//     const productComponents = productsData.map(item => <Product key={item.id} product={item}/> )
+    
+//     return (
+//         <div>
+//             {productComponents}
+//         </div>
+//     )
+// }
+
+// export default App
 // import Joke from "./components/Joke"
 // import jokesData from "./jokesData"
 
