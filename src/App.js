@@ -4,26 +4,53 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            firstName:""
+            firstName:"",
+            lastName:"",
+            isFriendly: true
         }
         this.handleChange = this.handleChange.bind(this)
     }
+    
     handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-
-            //firstName: event.targer.value
-        })
+        const {name,value,type,checked} =event.target
+        type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value})
     }
+     
+
     render(){
-    return (
-        <form>
-        <input type="text" name = "firstName" placeholder="first name" onChange={this.handleChange}/>
-        <br/>
-        <input type="text" name = "lastName" placeholder="Last name" onChange={this.handleChange}/>
-        <h1>{this.state.firstName} {this.state.lastName}</h1>
-        </form>
-    )
+            return (
+                <form>
+                        <input 
+                            type="text" 
+                            value={this.state.firstName}
+                            name = "firstName"
+                            placeholder="first name" 
+                            onChange={this.handleChange}
+                            />
+                        <br/>
+                        
+                        <input type="text" 
+                         value={this.state.lasttName}
+                         name = "lastName"
+                         placeholder="Last name" 
+                         onChange={this.handleChange}/>
+                        
+                        <textarea value= {"some default value "}
+                        onChange={this.handleChange}/>
+                    
+
+
+                        <br/>
+
+                        <input type = "checkbox" 
+                        name="isFriendly"
+                        checked={this.state.isFriendly}
+                        onChange={this.handleChange} />
+
+
+                        <h1>{this.state.firstName} {this.state.lastName}</h1>
+                </form>
+            )
     }
 }
 
