@@ -1,8 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
-import ContactCard from "./components/ContactCard"
+//import ContactCard from "./components/ContactCard"
 
+
+ReactDOM.render(<App/>,document.getElementById("root"))
 // function App2(){
 //     const date = new Date()
 //     const hours = date.getHours()
@@ -40,6 +42,6 @@ import ContactCard from "./components/ContactCard"
 //     )
 // }
 
-ReactDOM.render(<App/>,document.getElementById("root"))
+
  //ReactDOM.render(<App2/>,document.getElementById("root"))
 

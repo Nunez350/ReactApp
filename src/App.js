@@ -1,48 +1,71 @@
 import React from "react"
 
-import ContactCard from "./components/ContactCard"
+import Joke from "./components/Joke"
 
+function App() {
+    return (
+        <div>
+            
+         <Joke punchLine ="Its hard to explain things to a cleptomanic, they take things literally!"/>
+            <Joke question ="whats the best thing about Switzerland" 
+                punchLine ="I don't know, but the flas ia a big plus!"/>
+            <Joke question = "did you hear about the mathematicians who;s afraid of negative numbers?" 
+                punchLine= "He'sll stop at nothing to avoid thme"/>
+            <Joke question= "Hear about the new restaurant called karma?" 
+                punchLine="There's no menu: You get what you deserrve"/>
 
-function App(){
-return (
+            <Joke question="Did you hear about the claustrophobic asronaut?/" 
+                punchLine="He jsut needed a little space"/>
+           
+        </div>
 
-        <div className="contacts">
-
-                <ContactCard
-                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/300/200",
-
-               
-                phone:"(212) 300-3000",
-                email:"mrwhiske@gmail.com"}}
-                />
-
-
-                <ContactCard
-                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/200",
-
-                phone:"(212) 300-3000",
-                email:"mrwhiske@gmail.com"}}
-                />
-
-                <ContactCard
-                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/300",
-
-                
-                phone:"(212) 300-3000",
-                email:"mrwhiske@gmail.com"}}
-                />
-
-                <ContactCard
-                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/200/100",
-                phone:"(212) 300-3000",
-                email:"mrwhiske@gmail.com"}}
-                />
-  
-    </div>
-    )    
+    )
 }
 
-export default App
+export default App 
+//import ContactCard from "./components/ContactCard"
+
+
+// function App(){
+// return (
+
+//         <div className="contacts">
+
+//                 <ContactCard
+//                 contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/300/200",
+
+               
+//                 phone:"(212) 300-3000",
+//                 email:"mrwhiske@gmail.com"}}
+//                 />
+
+
+//                 <ContactCard
+//                 contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/200",
+
+//                 phone:"(212) 300-3000",
+//                 email:"mrwhiske@gmail.com"}}
+//                 />
+
+//                 <ContactCard
+//                 contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/300",
+
+                
+//                 phone:"(212) 300-3000",
+//                 email:"mrwhiske@gmail.com"}}
+//                 />
+
+//                 <ContactCard
+//                 contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/200/100",
+//                 phone:"(212) 300-3000",
+//                 email:"mrwhiske@gmail.com"}}
+//                 />
+  
+//     </div>
+//     )    
+// }
+
+// export default App
 
 
 // <header className="navbar"> This is the header</header>
