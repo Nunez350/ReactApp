@@ -1,4 +1,40 @@
 import React from "react"
+import TodoItem from "./components/TodoItem"
+import todosData from "./components/todosData"
+
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+           count: 0
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+handleClick() {
+  this.setState(prevState => {
+    return {
+        count: prevState.count + 1
+
+    }
+  })
+   
+
+}
+    render() {
+       
+        return (
+            <div>
+            <h1>{this.state.count}</h1>
+            <button onClick ={this.handleClick}>Change!</button>
+
+
+           
+                </div>
+        )
+    }
+}
+export default App
 
 // function App() {
 //     return (
@@ -8,35 +44,35 @@ import React from "react"
 //     )
 // }
 
-class App extends React.Component {
-    constructor(){
-        super()
+// class App extends React.Component {
+//     constructor(){
+//         super()
        
-        this.state = {
-           isLoggedIn: true
+//         this.state = {
+//            isLoggedIn: true
 
-        }
-    }
-    render() {
-        let wordDisplay
-        if (this.state.isLoggedIn ===true){
-            wordDisplay = "in"
-        } else {
-            wordDisplay = "out"
-        }
-        return (
-            <div> 
-                <h1> You are currently logged {wordDisplay} </h1>
-                <h1> {this.state.name}</h1>
-                <h1>{this.state.age} years old</h1>
+//         }
+//     }
+//     render() {
+//         let wordDisplay
+//         if (this.state.isLoggedIn ===true){
+//             wordDisplay = "in"
+//         } else {
+//             wordDisplay = "out"
+//         }
+//         return (
+//             <div> 
+//                 <h1> You are currently logged {wordDisplay} </h1>
+//                 <h1> {this.state.name}</h1>
+//                 <h1>{this.state.age} years old</h1>
           
-            </div>
-        )
-    }
-}
+//             </div>y
+//         )
+//     }
+// }
 
 
-export default App
+// export default App
 
 
 // import TodoItem from "./components/TodoItem"
