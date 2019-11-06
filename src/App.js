@@ -13,13 +13,20 @@ class App extends React.Component {
         super()
        
         this.state = {
-            name: "Roy",
-            age: 8
+           isLoggedIn: true
+
         }
     }
     render() {
+        let wordDisplay
+        if (this.state.isLoggedIn ===true){
+            wordDisplay = "in"
+        } else {
+            wordDisplay = "out"
+        }
         return (
             <div> 
+                <h1> You are currently logged {wordDisplay} </h1>
                 <h1> {this.state.name}</h1>
                 <h1>{this.state.age} years old</h1>
           
