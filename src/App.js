@@ -1,28 +1,44 @@
 import React from "react"
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
-import Footer from "./components/Footer"
-import './App.css';
 
-import ToDoItem from "./components/TodoItem"
+import ContactCard from "./components/ContactCard"
+
 
 function App(){
 return (
-    <div className="todo-list">
-        
-            <input type="checkbox"/>
-            <p>Placeholder text here</p>
-            <input type="checkbox"/>
-            <p>Placeholder text here</p>
-            <input type="checkbox"/>
-            <p>Placeholder text here</p>
+
+        <div className="contacts">
+
+                <ContactCard
+                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/300/200",
+
+               
+                phone:"(212) 300-3000",
+                email:"mrwhiske@gmail.com"}}
+                />
 
 
-        
+                <ContactCard
+                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/200",
 
+                phone:"(212) 300-3000",
+                email:"mrwhiske@gmail.com"}}
+                />
+
+                <ContactCard
+                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/400/300",
+
+                
+                phone:"(212) 300-3000",
+                email:"mrwhiske@gmail.com"}}
+                />
+
+                <ContactCard
+                contact={{name: "Mr> Whisekerson",imgUrl: "http://placekitten.com/200/100",
+                phone:"(212) 300-3000",
+                email:"mrwhiske@gmail.com"}}
+                />
+  
     </div>
-
-    
     )    
 }
 
@@ -84,3 +100,11 @@ export default App
 //     )
 // }
 // export default App
+
+
+
+//import Header from "./components/Header"
+//import MainContent from "./components/MainContent"
+//import Footer from "./components/Footer"
+//import './App.css';
+//import ToDoItem from "./components/TodoItem"

@@ -40,6 +40,6 @@ import ContactCard from "./components/ContactCard"
 //     )
 // }
 
-ReactDOM.render(<ContactCard/>,document.getElementById("root"))
+ReactDOM.render(<App/>,document.getElementById("root"))
  //ReactDOM.render(<App2/>,document.getElementById("root"))
 
