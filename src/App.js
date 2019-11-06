@@ -2,12 +2,14 @@ import React from "react"
 import Header from "./components/Header"
 import MainContent from "./components/MainContent"
 import Footer from "./components/Footer"
+import './App.css';
+
+import ToDoItem from "./components/TodoItem"
 
 function App(){
 return (
-    <div>
-
-        <div>
+    <div className="todo-list">
+        
             <input type="checkbox"/>
             <p>Placeholder text here</p>
             <input type="checkbox"/>
@@ -15,11 +17,8 @@ return (
             <input type="checkbox"/>
             <p>Placeholder text here</p>
 
-        </div>
-        <Header/>
-        <MainContent/>
-        <Footer/>
 
+        
 
     </div>
 
@@ -30,6 +29,10 @@ return (
 export default App
 
 
+// <header className="navbar"> This is the header</header>
+// <Header/>
+//     <MainContent/>
+//     <Footer/>
 
 
 
