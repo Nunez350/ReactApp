@@ -1,43 +1,73 @@
-
-
- import React, {Component} from "react"
-// import TodoItem from "./components/TodoItem"
-// import todosData from "./components/todosData"
-
+import React, {Component} from "react"
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            loading: false,
-            character: {}
+            firstName:""
         }
-
+        this.handleChange = this.handleChange.bind(this)
     }
-    componentDidMount() {
-        this.setState({loading:true})
-        fetch("https://swapi.co/api/people/1")
-        .then(response => response.json())
-        .then(data => {
-            this.setState({
-                loading: false,
-                character:data
-            })
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
 
+            //firstName: event.targer.value
         })
-
     }
-    render() {
-        const text = this.state.loading ? "loading " : this.state.character.name
-        return (
-            <div>
-               <p>{text}</p>
-            </div>
-        )
+    render(){
+    return (
+        <form>
+        <input type="text" name = "firstName" placeholder="first name" onChange={this.handleChange}/>
+        <br/>
+        <input type="text" name = "lastName" placeholder="Last name" onChange={this.handleChange}/>
+        <h1>{this.state.firstName} {this.state.lastName}</h1>
+        </form>
+    )
     }
 }
 
 export default App
+
+// import TodoItem from "./components/TodoItem"
+// import todosData from "./components/todosData"
+
+
+
+//accessing API and saveing the data in a state
+// class App extends Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             loading: false,
+//             character: {}
+//         }
+
+//     }
+//     componentDidMount() {
+//         this.setState({loading:true})
+//         fetch("https://swapi.co/api/people/1")
+//         .then(response => response.json())
+//         .then(data => {
+//             this.setState({
+//                 loading: false,
+//                 character:data
+//             })
+
+//         })
+
+//     }
+//     render() {
+//         const text = this.state.loading ? "loading " : this.state.character.name
+//         return (
+//             <div>
+//                <p>{text}</p>
+//             </div>
+//         )
+//     }
+// }
+
+// export default App
 
 // //fi9mnshing the to do list chekced
 // class App extends React.Component {
